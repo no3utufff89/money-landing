@@ -1,0 +1,33 @@
+//Media queries
+$tablet: 760px;
+$laptop: 1000px;
+$desktop: 1280px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin font($name, $weight) {
+  font: {
+    family: $name;
+    weight: $weight;
+    display: swap;
+  }
+  src: url("../assets/fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
+  url("../assets/fonts/#{ $name }-#{ $weight }.woff") format("woff"),
+}
+

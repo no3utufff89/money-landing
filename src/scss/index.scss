@@ -1,0 +1,20 @@
+//Default styles
+@import 'mixin';
+@import 'colors';
+@import 'fonts';
+@import 'normalize';
+@import 'default';
+@import "components/swiper-bundle.min";
+
+//Components
+@import './components/header';
+@import './components/logo';
+@import './components/menu';
+@import './components/footer';
+@import './components/container';
+@import './components/banner';
+@import './components/advantages';
+@import './components/registration';
+@import './components/reviews';
+@import './components/swiper';
+

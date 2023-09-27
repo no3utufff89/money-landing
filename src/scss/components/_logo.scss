@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  z-index: 999999;
+}
+.logo-image {
+  display: block;
+  &_header {
+    width: 139px;
+    height: 38px;
+  }
+
+  &_footer {
+    width: 141px;
+    height: 38px;
+    margin-bottom: 20px;
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+
+}

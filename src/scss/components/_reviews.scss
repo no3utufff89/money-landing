@@ -1,0 +1,62 @@
+.reviews {
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include laptop {
+    padding-top: 90px;
+    padding-bottom: 97px;
+  }
+  @include desktop {
+    padding-top: 90px;
+    padding-bottom: 117px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    max-width: 210px;
+    @include tablet {
+      margin-bottom: 40px;
+      max-width: 380px;
+    }
+    @include laptop {
+      max-width: none;
+    }
+  }
+  &__image {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    @include laptop {
+      width: 140px;
+      height: 140px;
+    }
+  }
+  &__swiper {
+    position: relative;
+    padding: 0 50px;
+    @include laptop {
+      padding: 0 70px;
+    }
+    @include desktop {
+      padding: 0 95px;
+    }
+  }
+  &__comment {
+    text-align: center;
+    max-width: 191px;
+    @include tablet {
+      max-width: 220px;
+    }
+    @include laptop {
+      max-width: 260px;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}

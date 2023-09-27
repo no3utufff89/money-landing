@@ -1,0 +1,130 @@
+.advantages {
+  padding-bottom: 90px;
+  @include tablet {
+    padding-bottom: 79px;
+  }
+  @include laptop {
+    padding-bottom: 90px;
+  }
+  @include desktop {
+    padding-bottom: 90px;
+  }
+  &__title {
+    max-width: 240px;
+    margin-bottom: 20px;
+    @include tablet {
+      max-width: 380px;
+      margin-bottom: 45px;
+    }
+    @include laptop {
+      max-width: none;
+      margin-bottom: 54px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 50px;
+    padding-left: 41px;
+    justify-content: center;
+    @include tablet {
+      row-gap: 44px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include laptop {
+      column-gap: normal;
+    }
+  }
+  &__item {
+    max-width: 220px;
+    position: relative;
+    @include tablet {
+      max-width: 216px;
+    }
+    @include laptop {
+      max-width: 181px;
+    }
+    @include desktop {
+      max-width: 216px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 2px;
+      background: linear-gradient($linearGradient);
+      @include tablet {
+        height: 4px;
+        width: 100%;
+      }
+      @include laptop {
+        max-width: 180px;
+      }
+      @include desktop {
+        max-width: 100%;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: -6px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 36px;
+      height: 36px;
+      @include tablet {
+        top: -3px;
+      }
+      @include desktop {
+        top: 0;
+      }
+    }
+    &_stat:before {
+      background-image: url('../assets/icons/Equalizer.svg');
+    }
+    &_reliability:before {
+      background-image: url('../assets/icons/Lock.svg');
+    }
+    &_change:before {
+      background-image: url('../assets/icons/Autorenew.svg');
+    }
+    &_comfort:before {
+      background-image: url('../assets/icons/Check_circle.svg');
+    }
+  }
+}
+.advantage {
+  &__title {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.4px;
+    margin-bottom: 8px;
+    @include tablet {
+      font-size: 24px;
+      line-height: 28.8px;
+      margin-bottom: 13.5px;
+    }
+    @include desktop {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 10px;
+    }
+  }
+  &__desc {
+    padding-bottom: 10px;
+    @include tablet {
+      padding-bottom: 19px;
+    }
+    @include desktop {
+      padding-bottom: 17px;
+    }
+  }
+}

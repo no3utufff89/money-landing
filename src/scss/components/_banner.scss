@@ -1,0 +1,58 @@
+.banner-section {
+  padding-top: 0;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 300px;
+    background-image: url(../img/bg/banner-image.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    @include tablet {
+      padding-top: 448px;
+      background-size: 455px 407px;
+    }
+    @include laptop {
+      padding-top: 157px;
+      padding-bottom: 20px;
+      align-items: normal;
+      background-position: top right;
+      background-size: 455px 408px;
+    }
+    @include desktop {
+      padding-top: 199px;
+      padding-bottom: 76px;
+      background-size: 549px 494px;
+      background-position: top right 77px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__description-text {
+    margin-bottom: 30px;
+    max-width: 290px;
+    @include tablet {
+      max-width: 399px;
+      margin-bottom: 50px;
+    }
+  }
+  &__btn {
+    padding: 12px 30px;
+    width: 100%;
+    max-width: 290px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    @include tablet {
+      max-width: 380px;
+      height: 70px;
+      font-size: 18px;
+    }
+  }
+}

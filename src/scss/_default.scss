@@ -1,0 +1,196 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Nunito, Arial, sans-serif;
+  font-weight: 400;
+  color: $mainDark; /*цвет под ваш проект*/
+  background-color: $white; /*цвет под ваш проект*/
+  font-size: 14px;
+  line-height: 18.2px;
+  background-image: url(../img/bg/top-bg_mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 23.4px;
+    background-image: url(../img/bg/top-bg_tablet.svg);
+  }
+  @include laptop {
+    background-image: url(../img/bg/top-bg_laptop.svg);
+  }
+  @include desktop {
+    background-image: url(../img/bg/top-bg_dt.svg);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+address {
+  font-style: normal;
+}
+fieldset, input {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+iframe {
+  border: none;
+}
+
+.icon {
+  fill: currentColor;
+  display: block;
+
+  &:hover {
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+//Секции,заголовки, текст в подзаголовках
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include laptop {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.section-custom {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include laptop {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.section-title {
+  font-family: Comfortaa, sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  @include tablet {
+    font-size: 40px;
+  }
+}
+
+.description-text {
+  font-family: Nunito, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.2px;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+}
+.overlay {
+  display: none;
+  opacity: 0;
+
+  &_active {
+    opacity: 0.8;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $palePink;
+    z-index: 2;
+
+  }
+}
+
+//Кнопки
+.btn {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.btn_color {
+  border-radius: 10px;
+  background: linear-gradient(87deg, #2E00B1 -11.74%, #8100BD 48.81%, #A400BE 113.27%);
+  color: $white;
+  letter-spacing: 0.5px;
+  &:disabled {
+    background: $gray;
+    pointer-events: none;
+  }
+}
+
+
+
+
